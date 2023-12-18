@@ -1,5 +1,5 @@
 "use client";
-import { API } from "@/lib/API.js";
+// import { API } from "@/lib/API.js";
 // import { useRouter } from "next/navigation.js";
 import { useEffect, useState } from "react";
 
@@ -8,7 +8,7 @@ export default function Comments({ post }) {
 	const [displayComments, setDisplayComments] = useState({ comments: [] });
 
 	async function fetchComments() {
-		const response = await fetch(`${API}/api/posts/${post.id}/comments`, {
+		const response = await fetch(`/api/posts/${post.id}/comments`, {
 			cache: "no-store",
 		});
 		const info = await response.json();

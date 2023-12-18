@@ -1,5 +1,5 @@
 "use client";
-import { API } from "@/lib/API.js";
+// import { API } from "@/lib/API.js";
 import { useRouter } from "next/navigation.js";
 import Edit from "./Edit.jsx";
 import { useState } from "react";
@@ -12,7 +12,7 @@ export default function Post({ post }) {
 	const router = useRouter();
 	//DELETE
 	async function handleDelete() {
-		const response = await fetch(`${API}/api/posts/${post.id}`, {
+		const response = await fetch(`/api/posts/${post.id}`, {
 			method: "DELETE",
 		});
 		router.refresh();
@@ -20,7 +20,7 @@ export default function Post({ post }) {
 
 	//LIKE
 	async function handleLike() {
-		const response = await fetch(`${API}/api/posts/${post.id}/likes`, {
+		const response = await fetch(`/api/posts/${post.id}/likes`, {
 			method: "POST",
 			cache: "no-store",
 		});

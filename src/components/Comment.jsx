@@ -1,5 +1,5 @@
 "use client";
-import { API } from "@/lib/API.js";
+// import { API } from "@/lib/API.js";
 import { useRouter } from "next/navigation.js";
 import { useState } from "react";
 export default function Comment({ post, setIsComment }) {
@@ -13,7 +13,7 @@ export default function Comment({ post, setIsComment }) {
 
 		//POST
 		const response = await fetch(
-			`${API}/api/posts/${post.id}/comments`,
+			`/api/posts/${post.id}/comments`,
 
 			{
 				method: "POST",

@@ -1,5 +1,5 @@
 "use client";
-import { API } from "@/lib/API.js";
+// import { API } from "@/lib/API.js";
 import { useRouter } from "next/navigation.js";
 import { useState } from "react";
 export default function NewPost() {
@@ -9,7 +9,7 @@ export default function NewPost() {
 
 	async function handleSubmit(e) {
 		e.preventDefault();
-		const res = await fetch(`${API}/api/posts`, {
+		const res = await fetch(`/api/posts`, {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",

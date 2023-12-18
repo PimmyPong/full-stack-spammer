@@ -1,6 +1,8 @@
 import NewPost from "@/components/NewPost.jsx";
 import PostFromAll from "@/components/PostFromAll.jsx";
 
+export const dynamic = "force-dynamic";
+
 export default function Home() {
 	return (
 		<div>
